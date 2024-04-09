@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+html,
+body {
+  background-color: #F6F8FA !important;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+body {
+  font-family: Inter, sans-serif;
+}
+
+@layer utilities {
+  [x-cloak] {
+    @apply hidden;
+  }
+
+  label.required:after {
+    content: " *";
+    color: #f00;
+  }
+}
+
+@layer components {
+  .scrollbar::-webkit-scrollbar {
+    @apply w-[4.5px] h-1;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    @apply rounded-full bg-slate-100;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full border-4 border-gray-400;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center whitespace-nowrap border border-transparent text-center px-4 py-2 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-[#008020] focus:ring-offset-2;
+  }
+
+  .link {
+    @apply text-gray-500 font-semibold hover:underline focus:outline-none text-base;
+  }
+
+  .btn-primary {
+    @apply btn border-transparent bg-IYF Free Weekend Academy-500 text-white hover:bg-IYF Free Weekend Academy-600 focus:ring-IYF Free Weekend Academy-600 rounded-lg font-[500];
+  }
+
+
+  .btn-outline {
+    @apply text-[#617687] bg-white rounded-lg text-sm hover:bg-gray-100 border px-4 py-2 border-gray-300 font-[500] flex items-center gap-2.5;
+  }
+
+  .btn-disabled {
+    @apply cursor-not-allowed text-gray-50 border-gray-300 bg-gray-300 hover:bg-gray-300 focus:ring-gray-200;
+  }
+
+  .section {
+    @apply max-w-[1400px] mx-auto px-4 md:px-6 lg:px-8
+  }
+
+  button {
+    @apply transition-all ease-in-out duration-200 text-sm !font-[600] !cursor-pointer whitespace-nowrap disabled:!cursor-not-allowed;
+  }
+
+  a {
+    @apply transition-all ease-in-out duration-200 !font-[600] !cursor-pointer;
+  }
+
+  input,textarea,button {
+    @apply disabled:!cursor-not-allowed !text-sm;
+
+  }
+}
+
+thead {
+  @apply bg-gray-50 whitespace-nowrap !capitalize;
+}
+
+th {
+  @apply bg-gray-50 whitespace-nowrap !capitalize;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+}
+
+ul > li > a {
+  @apply !font-[500];
+}
+
+input {
+  font-size: 14px;
+}
+
+input.disabled {
+  @apply !bg-[#EDEFF2];
+}
